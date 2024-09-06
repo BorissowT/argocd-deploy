@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-  repository: https://github.com/BorissowT/argocd-deploy
+  repository: borissowt/flask-hello
   tag: latest
   pullPolicy: IfNotPresent
 
