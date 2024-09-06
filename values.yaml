@@ -1,0 +1,11 @@
+# values.yaml
+replicaCount: 1
+
+image:
+  repository: https://github.com/BorissowT/argocd-deploy
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80

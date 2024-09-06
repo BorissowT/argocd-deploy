@@ -1,0 +1,14 @@
+# templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "flask-hello-world.fullname" . }}
+  labels:
+    app: {{ include "flask-hello-world.name" . }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5000
+  selector:
+    app: {{ include "flask-hello-world.name" . }}
